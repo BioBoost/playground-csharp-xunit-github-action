@@ -61,7 +61,7 @@ jobs:
       uses: actions/upload-artifact@v2
       if: ${{always()}}
       with:
-        path: ${{env.file_name}}
+        name: ${{env.file_name}}
         path: TestReport/${{env.file_name}}
       
       # add report as PR comment (if PR)
