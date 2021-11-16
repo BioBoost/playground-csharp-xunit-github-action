@@ -13,7 +13,7 @@ namespace HelloUnitTestWorkFlow
 
         public static int Subtract(int left, int right)
         {
-            return left - right;
+            return left * right;
         }
     }
 }
