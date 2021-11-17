@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       config: 'Release'
-      report_file: 'TestReport/report.md'
+      report_file: 'TestReport_HelloUnitTestWorkFlow.md'
       
     steps:
     - uses: actions/checkout@v2
@@ -20,8 +20,12 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.101    
-      
+        dotnet-version: 3.1.101
+    
+    # Move to Project Dir
+    - name: Go inside project dir
+      run: cd HelloUnitTestWorkFlow
+
     # Install project dependencies
     - name: Install dependencies
       run: dotnet restore
@@ -39,7 +43,7 @@ jobs:
       if: ${{always()}}
       run: |
         git config --local user.name "xunit"
-        git add ./TestReport
+        git add ${{github.workspace}}/$report_file
         git commit -m "Update the TestReport"
     
     # Push changes to the remote
