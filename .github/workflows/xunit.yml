@@ -45,6 +45,7 @@ jobs:
     # Push changes to the remote
     - name: Push changes # push the output folder to your repo
       uses: ad-m/github-push-action@master
+      if: ${{always()}}
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         # force: true
