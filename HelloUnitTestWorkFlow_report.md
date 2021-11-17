@@ -5,8 +5,8 @@
 <p>
 <strong>Overall Result:</strong> ❌ Fail <br />
 <strong>Pass Rate:</strong> 50% <br />
-<strong>Run Duration:</strong> 2s 112ms <br />
-<strong>Date:</strong> 2021-11-17 14:29:42 - 2021-11-17 14:29:44 <br />
+<strong>Run Duration:</strong> 2s 87ms <br />
+<strong>Date:</strong> 2021-11-17 14:33:45 - 2021-11-17 14:33:47 <br />
 <strong>Framework:</strong> .NETCoreApp,Version=v3.1 <br />
 <strong>Total Tests:</strong> 2 <br />
 </p>
@@ -73,14 +73,14 @@ Actual:   70</code></pre>
 <summary>Informational</summary>
 <pre><code>
 [xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET Core 3.1.1)
-[xUnit.net 00:00:00.45]   Discovering: Tests
-[xUnit.net 00:00:00.52]   Discovered:  Tests
-[xUnit.net 00:00:00.52]   Starting:    Tests
-[xUnit.net 00:00:00.63]       Assert.Equal() Failure
-[xUnit.net 00:00:00.63]       Expected: 3
-[xUnit.net 00:00:00.63]       Actual:   70
-[xUnit.net 00:00:00.63]       Stack Trace:
-[xUnit.net 00:00:00.63]         /home/runner/work/playground-csharp-xunit-github-action/playground-csharp-xunit-github-action/HelloUnitTestWorkFlow/Tests/UnitTestMathHelper.cs(19,0): at Tests.UnitTestMathHelper.TestSubtraction()
+[xUnit.net 00:00:00.46]   Discovering: Tests
+[xUnit.net 00:00:00.51]   Discovered:  Tests
+[xUnit.net 00:00:00.51]   Starting:    Tests
+[xUnit.net 00:00:00.62]       Assert.Equal() Failure
+[xUnit.net 00:00:00.62]       Expected: 3
+[xUnit.net 00:00:00.62]       Actual:   70
+[xUnit.net 00:00:00.62]       Stack Trace:
+[xUnit.net 00:00:00.62]         /home/runner/work/playground-csharp-xunit-github-action/playground-csharp-xunit-github-action/HelloUnitTestWorkFlow/Tests/UnitTestMathHelper.cs(19,0): at Tests.UnitTestMathHelper.TestSubtraction()
 [xUnit.net 00:00:00.63]   Finished:    Tests
 </code></pre>
 </details>
@@ -94,7 +94,7 @@ Actual:   70</code></pre>
 <details>
 <summary>Error</summary>
 <pre><code>
-[xUnit.net 00:00:00.63]     Tests.UnitTestMathHelper.TestSubtraction [FAIL]
+[xUnit.net 00:00:00.62]     Tests.UnitTestMathHelper.TestSubtraction [FAIL]
 </code></pre>
 </details>
 
