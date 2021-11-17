@@ -36,6 +36,7 @@ jobs:
       
     # Commit the report to the repo
     - name: Commit files
+      if: ${{always()}}
       run: |
         git config --local user.name "xunit"
         git add ./TestReport
