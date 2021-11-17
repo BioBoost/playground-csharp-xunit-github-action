@@ -12,6 +12,7 @@ jobs:
     env:
       config: 'Release'
       report_file: 'TestReport_HelloUnitTestWorkFlow.md'
+      project_dir: 'HelloUnitTestWorkFlow'
       
     steps:
     - uses: actions/checkout@v2
@@ -21,29 +22,28 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-    
-    # Move to Project Dir
-    - name: Go inside project dir
-      run: cd HelloUnitTestWorkFlow
 
     # Install project dependencies
     - name: Install dependencies
       run: dotnet restore
+      working-directory: ${{env.project_dir}}
       
     # Build the project
     - name: Build
       run: dotnet build --configuration $config --no-restore
+      working-directory: ${{env.project_dir}}
       
     # Run the xUnit tests
     - name: Test PR      
       run: dotnet test --no-restore --no-build --configuration $config --logger:"liquid.md;LogFileName=${{github.workspace}}/$report_file;Title=Test Report;"
+      working-directory: ${{env.project_dir}}
       
     # Commit the report to the repo
     - name: Commit files
       if: ${{always()}}
       run: |
         git config --local user.name "xunit"
-        git add ${{github.workspace}}/$report_file
+        git add .
         git commit -m "Update the TestReport"
     
     # Push changes to the remote
