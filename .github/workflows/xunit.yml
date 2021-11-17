@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       config: 'Release'
-      report_file: 'report.md'
+      report_file: 'TestReport/report.md'
       
     steps:
     - uses: actions/checkout@v2
