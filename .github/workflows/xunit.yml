@@ -16,6 +16,7 @@ jobs:
       matrix:
         solution: ['HelloUnitTestWorkFlow', 'SeriesOfSquares']
       fail-fast: false    # Don't stop on fail (of tests)
+      max-parallel: 1     # Don't run parallel as it will create push conflict
 
     steps:
     - uses: actions/checkout@v2
