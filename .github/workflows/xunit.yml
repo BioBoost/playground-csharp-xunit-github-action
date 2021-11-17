@@ -15,7 +15,8 @@ jobs:
     strategy:
       matrix:
         solution: ['HelloUnitTestWorkFlow', 'SeriesOfSquares']
-      
+      fail-fast: false    # Don't stop on fail (of tests)
+
     steps:
     - uses: actions/checkout@v2
 
