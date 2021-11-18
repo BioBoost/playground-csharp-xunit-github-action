@@ -18,6 +18,6 @@ on:
 
 jobs:
   first:
-    uses: BioBoost/playground-csharp-xunit-github-action/.github/workflows/run_xunit_tests.yaml@d51b8b4da2337614b08002c44cf22de72ff369ce
+    uses: BioBoost/playground-csharp-xunit-github-action/.github/workflows/run_xunit_tests.yaml@master
     with:
       solution: 'HelloUnitTestWorkFlow'
