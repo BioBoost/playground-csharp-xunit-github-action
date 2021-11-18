@@ -5,8 +5,8 @@
 <p>
 <strong>Overall Result:</strong> ❌ Fail <br />
 <strong>Pass Rate:</strong> 50% <br />
-<strong>Run Duration:</strong> 2s 87ms <br />
-<strong>Date:</strong> 2021-11-17 14:33:45 - 2021-11-17 14:33:47 <br />
+<strong>Run Duration:</strong> 2s 182ms <br />
+<strong>Date:</strong> 2021-11-17 14:40:40 - 2021-11-17 14:40:43 <br />
 <strong>Framework:</strong> .NETCoreApp,Version=v3.1 <br />
 <strong>Total Tests:</strong> 2 <br />
 </p>
@@ -62,7 +62,7 @@ Actual:   70</code></pre>
 <pre><code>   at Tests.UnitTestMathHelper.TestSubtraction() in /home/runner/work/playground-csharp-xunit-github-action/playground-csharp-xunit-github-action/HelloUnitTestWorkFlow/Tests/UnitTestMathHelper.cs:line 19</code></pre>
 </details></blockquote>
 </td>
-<td>2ms</td>
+<td>3ms</td>
 </tr>
 </tbody>
 </table>
@@ -73,15 +73,15 @@ Actual:   70</code></pre>
 <summary>Informational</summary>
 <pre><code>
 [xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET Core 3.1.1)
-[xUnit.net 00:00:00.46]   Discovering: Tests
-[xUnit.net 00:00:00.51]   Discovered:  Tests
-[xUnit.net 00:00:00.51]   Starting:    Tests
-[xUnit.net 00:00:00.62]       Assert.Equal() Failure
-[xUnit.net 00:00:00.62]       Expected: 3
-[xUnit.net 00:00:00.62]       Actual:   70
-[xUnit.net 00:00:00.62]       Stack Trace:
-[xUnit.net 00:00:00.62]         /home/runner/work/playground-csharp-xunit-github-action/playground-csharp-xunit-github-action/HelloUnitTestWorkFlow/Tests/UnitTestMathHelper.cs(19,0): at Tests.UnitTestMathHelper.TestSubtraction()
-[xUnit.net 00:00:00.63]   Finished:    Tests
+[xUnit.net 00:00:00.47]   Discovering: Tests
+[xUnit.net 00:00:00.54]   Discovered:  Tests
+[xUnit.net 00:00:00.54]   Starting:    Tests
+[xUnit.net 00:00:00.66]       Assert.Equal() Failure
+[xUnit.net 00:00:00.66]       Expected: 3
+[xUnit.net 00:00:00.66]       Actual:   70
+[xUnit.net 00:00:00.66]       Stack Trace:
+[xUnit.net 00:00:00.66]         /home/runner/work/playground-csharp-xunit-github-action/playground-csharp-xunit-github-action/HelloUnitTestWorkFlow/Tests/UnitTestMathHelper.cs(19,0): at Tests.UnitTestMathHelper.TestSubtraction()
+[xUnit.net 00:00:00.66]   Finished:    Tests
 </code></pre>
 </details>
 
@@ -94,7 +94,7 @@ Actual:   70</code></pre>
 <details>
 <summary>Error</summary>
 <pre><code>
-[xUnit.net 00:00:00.62]     Tests.UnitTestMathHelper.TestSubtraction [FAIL]
+[xUnit.net 00:00:00.66]     Tests.UnitTestMathHelper.TestSubtraction [FAIL]
 </code></pre>
 </details>
 
