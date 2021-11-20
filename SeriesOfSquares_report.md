@@ -5,8 +5,8 @@
 <p>
 <strong>Overall Result:</strong> ❌ Fail <br />
 <strong>Pass Rate:</strong> 0% <br />
-<strong>Run Duration:</strong> 2s 29ms <br />
-<strong>Date:</strong> 2021-11-20 08:13:01 - 2021-11-20 08:13:03 <br />
+<strong>Run Duration:</strong> 1s 990ms <br />
+<strong>Date:</strong> 2021-11-20 08:33:23 - 2021-11-20 08:33:25 <br />
 <strong>Framework:</strong> .NETCoreApp,Version=v3.1 <br />
 <strong>Total Tests:</strong> 2 <br />
 </p>
@@ -57,7 +57,7 @@ Actual:   -1</code></pre>
 <pre><code>   at Tests.UnitTestSquaredSeries.TestCalculateSumSeries() in /home/runner/work/playground-csharp-xunit-github-action/playground-csharp-xunit-github-action/SeriesOfSquares/Tests/UnitTestSquaredSeries.cs:line 23</code></pre>
 </details></blockquote>
 </td>
-<td>6ms</td>
+<td>4ms</td>
 </tr>
 <tr>
 <td> ❌ Failed </td>
@@ -83,19 +83,19 @@ Actual:   -1</code></pre>
 <pre><code>
 [xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET Core 3.1.1)
 [xUnit.net 00:00:00.39]   Discovering: Tests
-[xUnit.net 00:00:00.46]   Discovered:  Tests
-[xUnit.net 00:00:00.46]   Starting:    Tests
-[xUnit.net 00:00:00.56]       Assert.Equal() Failure
+[xUnit.net 00:00:00.45]   Discovered:  Tests
+[xUnit.net 00:00:00.45]   Starting:    Tests
+[xUnit.net 00:00:00.55]       Assert.Equal() Failure
+[xUnit.net 00:00:00.55]       Expected: 14
+[xUnit.net 00:00:00.55]       Actual:   -1
+[xUnit.net 00:00:00.55]       Stack Trace:
+[xUnit.net 00:00:00.55]         /home/runner/work/playground-csharp-xunit-github-action/playground-csharp-xunit-github-action/SeriesOfSquares/Tests/UnitTestSquaredSeries.cs(23,0): at Tests.UnitTestSquaredSeries.TestCalculateSumSeries()
+[xUnit.net 00:00:00.55]       Assert.Equal() Failure
 [xUnit.net 00:00:00.56]       Expected: 14
 [xUnit.net 00:00:00.56]       Actual:   -1
 [xUnit.net 00:00:00.56]       Stack Trace:
-[xUnit.net 00:00:00.56]         /home/runner/work/playground-csharp-xunit-github-action/playground-csharp-xunit-github-action/SeriesOfSquares/Tests/UnitTestSquaredSeries.cs(23,0): at Tests.UnitTestSquaredSeries.TestCalculateSumSeries()
-[xUnit.net 00:00:00.57]       Assert.Equal() Failure
-[xUnit.net 00:00:00.57]       Expected: 14
-[xUnit.net 00:00:00.57]       Actual:   -1
-[xUnit.net 00:00:00.57]       Stack Trace:
-[xUnit.net 00:00:00.57]         /home/runner/work/playground-csharp-xunit-github-action/playground-csharp-xunit-github-action/SeriesOfSquares/Tests/UnitTestSquaredSeries.cs(13,0): at Tests.UnitTestSquaredSeries.TestSeriesSum()
-[xUnit.net 00:00:00.57]   Finished:    Tests
+[xUnit.net 00:00:00.56]         /home/runner/work/playground-csharp-xunit-github-action/playground-csharp-xunit-github-action/SeriesOfSquares/Tests/UnitTestSquaredSeries.cs(13,0): at Tests.UnitTestSquaredSeries.TestSeriesSum()
+[xUnit.net 00:00:00.56]   Finished:    Tests
 </code></pre>
 </details>
 
@@ -108,8 +108,8 @@ Actual:   -1</code></pre>
 <details>
 <summary>Error</summary>
 <pre><code>
-[xUnit.net 00:00:00.56]     Tests.UnitTestSquaredSeries.TestCalculateSumSeries [FAIL]
-[xUnit.net 00:00:00.57]     Tests.UnitTestSquaredSeries.TestSeriesSum [FAIL]
+[xUnit.net 00:00:00.54]     Tests.UnitTestSquaredSeries.TestCalculateSumSeries [FAIL]
+[xUnit.net 00:00:00.55]     Tests.UnitTestSquaredSeries.TestSeriesSum [FAIL]
 </code></pre>
 </details>
 
