@@ -18,6 +18,14 @@ on:
 
 jobs:
   first:
+    if: ${{always()}}
     uses: BioBoost/playground-csharp-xunit-github-action/.github/workflows/run_xunit_tests.yaml@master
     with:
       solution: 'HelloUnitTestWorkFlow'
+
+  second:
+    needs: [first]
+    if: ${{always()}}
+    uses: BioBoost/playground-csharp-xunit-github-action/.github/workflows/run_xunit_tests.yaml@master
+    with:
+      solution: 'SeriesOfSquares'
