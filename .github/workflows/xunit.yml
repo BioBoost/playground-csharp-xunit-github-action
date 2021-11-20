@@ -4,28 +4,32 @@ on:
   push:
     branches: [ master ]
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     env:
-#       config: 'Release'
-
-#     strategy:
-#       matrix:
-#         solution: ['HelloUnitTestWorkFlow', 'SeriesOfSquares']
-#       fail-fast: false    # Don't stop on fail (of tests)
-#       max-parallel: 1     # Don't run parallel as it will create push conflict
-
 jobs:
-  first:
-    if: ${{always()}}
-    uses: BioBoost/playground-csharp-xunit-github-action/.github/workflows/run_xunit_tests.yaml@master
-    with:
-      solution: 'HelloUnitTestWorkFlow'
+  build:
+    runs-on: ubuntu-latest
 
-  second:
-    needs: [first]
-    if: ${{always()}}
-    uses: BioBoost/playground-csharp-xunit-github-action/.github/workflows/run_xunit_tests.yaml@master
-    with:
-      solution: 'SeriesOfSquares'
+    strategy:
+      matrix:
+        solution: ['HelloUnitTestWorkFlow', 'SeriesOfSquares']
+      fail-fast: false    # Don't stop on fail (of tests)
+      max-parallel: 1     # Don't run parallel as it will create push conflict
+
+    steps:
+    - uses: BioBoost/playground-csharp-xunit-github-action/.github/workflows/run_xunit_tests.yaml@master
+      with:
+        solution: ${{matrix.solution}}
+
+#### This works
+# jobs:
+#   first:
+#     if: ${{always()}}
+#     uses: BioBoost/playground-csharp-xunit-github-action/.github/workflows/run_xunit_tests.yaml@master
+#     with:
+#       solution: 'HelloUnitTestWorkFlow'
+
+#   second:
+#     needs: [first]
+#     if: ${{always()}}
+#     uses: BioBoost/playground-csharp-xunit-github-action/.github/workflows/run_xunit_tests.yaml@master
+#     with:
+#       solution: 'SeriesOfSquares'

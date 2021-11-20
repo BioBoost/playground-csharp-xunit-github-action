@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: master
+        ref: master   # Make sure latest is used (which is not the case if committing from other job)
 
     # Setup the .NET Core environment
     - name: Setup .NET Core
