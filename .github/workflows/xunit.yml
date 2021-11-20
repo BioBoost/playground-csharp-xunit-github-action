@@ -4,22 +4,7 @@ on:
   push:
     branches: [ master ]
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        solution: ['HelloUnitTestWorkFlow', 'SeriesOfSquares']
-      fail-fast: false    # Don't stop on fail (of tests)
-      max-parallel: 1     # Don't run parallel as it will create push conflict
-
-    steps:
-      - uses: BioBoost/playground-csharp-xunit-github-action/.github/workflows/run_xunit_tests.yaml@master
-        with:
-          solution: ${{matrix.solution}}
-
-#### This works
+### This works
 # jobs:
 #   first:
 #     if: ${{always()}}
@@ -33,3 +18,19 @@ jobs:
 #     uses: BioBoost/playground-csharp-xunit-github-action/.github/workflows/run_xunit_tests.yaml@master
 #     with:
 #       solution: 'SeriesOfSquares'
+
+
+# Apparently can't call workflow from matrix :(
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        solution: ['HelloUnitTestWorkFlow', 'SeriesOfSquares']
+      fail-fast: false    # Don't stop on fail (of tests)
+      max-parallel: 1     # Don't run parallel as it will create push conflict
+
+    uses: BioBoost/playground-csharp-xunit-github-action/.github/workflows/run_xunit_tests.yaml@master
+      with:
+        solution: ${{matrix.solution}}
