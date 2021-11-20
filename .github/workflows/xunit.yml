@@ -15,9 +15,9 @@ jobs:
       max-parallel: 1     # Don't run parallel as it will create push conflict
 
     steps:
-    - uses: BioBoost/playground-csharp-xunit-github-action/.github/workflows/run_xunit_tests.yaml@master
-      with:
-        solution: ${{matrix.solution}}
+      - uses: BioBoost/playground-csharp-xunit-github-action/.github/workflows/run_xunit_tests.yaml@master
+        with:
+          solution: ${{matrix.solution}}
 
 #### This works
 # jobs:
