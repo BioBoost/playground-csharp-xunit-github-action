@@ -17,6 +17,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: master
 
     # Setup the .NET Core environment
     - name: Setup .NET Core
