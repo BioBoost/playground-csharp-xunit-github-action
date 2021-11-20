@@ -1,58 +1,58 @@
-name: Run xUnit Solution Tests
+# name: Run xUnit Solution Tests
 
-on:
-  workflow_call:
-    inputs:
-      solution:
-        description: 'Name of the C# solution'
-        required: true
-        type: string
+# on:
+#   workflow_call:
+#     inputs:
+#       solution:
+#         description: 'Name of the C# solution'
+#         required: true
+#         type: string
 
-jobs:
-  testing:
-    name: Pass input and secrets to my-action
-    runs-on: ubuntu-latest
-    env:
-      config: 'Release'
+# jobs:
+#   testing:
+#     name: Pass input and secrets to my-action
+#     runs-on: ubuntu-latest
+#     env:
+#       config: 'Release'
 
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        ref: master   # Make sure latest is used (which is not the case if committing from other job)
+#     steps:
+#     - uses: actions/checkout@v2
+#       with:
+#         ref: master   # Make sure latest is used (which is not the case if committing from other job)
 
-    # Setup the .NET Core environment
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.101
+#     # Setup the .NET Core environment
+#     - name: Setup .NET Core
+#       uses: actions/setup-dotnet@v1
+#       with:
+#         dotnet-version: 3.1.101
 
-    # Install project dependencies
-    - name: Install dependencies
-      run: dotnet restore
-      working-directory: ${{ inputs.solution }}
+#     # Install project dependencies
+#     - name: Install dependencies
+#       run: dotnet restore
+#       working-directory: ${{ inputs.solution }}
       
-    # Build the project
-    - name: Build
-      run: dotnet build --configuration $config --no-restore
-      working-directory: ${{ inputs.solution }}
+#     # Build the project
+#     - name: Build
+#       run: dotnet build --configuration $config --no-restore
+#       working-directory: ${{ inputs.solution }}
       
-    # Run the xUnit tests
-    - name: Run xUnit tests
-      run: dotnet test --no-restore --no-build --configuration $config --logger:"liquid.md;LogFileName=${{github.workspace}}/${{ inputs.solution }}_report.md;Title=Test Report ${{ inputs.solution }};"
-      working-directory: ${{ inputs.solution }}
+#     # Run the xUnit tests
+#     - name: Run xUnit tests
+#       run: dotnet test --no-restore --no-build --configuration $config --logger:"liquid.md;LogFileName=${{github.workspace}}/${{ inputs.solution }}_report.md;Title=Test Report ${{ inputs.solution }};"
+#       working-directory: ${{ inputs.solution }}
       
-    # Commit the report to the repo
-    - name: Commit files
-      if: ${{always()}}
-      run: |
-        git config --local user.name "xunit"
-        git add .
-        git commit -m "Update the test reports"
+#     # Commit the report to the repo
+#     - name: Commit files
+#       if: ${{always()}}
+#       run: |
+#         git config --local user.name "xunit"
+#         git add .
+#         git commit -m "Update the test reports"
     
-    # Push changes to the remote
-    - name: Push changes # push the output folder to your repo
-      uses: ad-m/github-push-action@master
-      if: ${{always()}}
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        # force: true
+#     # Push changes to the remote
+#     - name: Push changes # push the output folder to your repo
+#       uses: ad-m/github-push-action@master
+#       if: ${{always()}}
+#       with:
+#         github_token: ${{ secrets.GITHUB_TOKEN }}
+#         # force: true
