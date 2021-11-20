@@ -5,8 +5,8 @@
 <p>
 <strong>Overall Result:</strong> ❌ Fail <br />
 <strong>Pass Rate:</strong> 50% <br />
-<strong>Run Duration:</strong> 1s 886ms <br />
-<strong>Date:</strong> 2021-11-20 08:32:52 - 2021-11-20 08:32:54 <br />
+<strong>Run Duration:</strong> 2s 122ms <br />
+<strong>Date:</strong> 2021-11-20 08:36:02 - 2021-11-20 08:36:04 <br />
 <strong>Framework:</strong> .NETCoreApp,Version=v3.1 <br />
 <strong>Total Tests:</strong> 2 <br />
 </p>
@@ -48,7 +48,7 @@
 <tr>
 <td> ✔️ Passed </td>
 <td>Tests.UnitTestMathHelper.TestSummation</td>
-<td>4ms</td>
+<td>5ms</td>
 </tr>
 <tr>
 <td> ❌ Failed </td>
@@ -73,15 +73,15 @@ Actual:   70</code></pre>
 <summary>Informational</summary>
 <pre><code>
 [xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET Core 3.1.1)
-[xUnit.net 00:00:00.36]   Discovering: Tests
-[xUnit.net 00:00:00.40]   Discovered:  Tests
-[xUnit.net 00:00:00.41]   Starting:    Tests
-[xUnit.net 00:00:00.49]       Assert.Equal() Failure
-[xUnit.net 00:00:00.49]       Expected: 3
-[xUnit.net 00:00:00.49]       Actual:   70
-[xUnit.net 00:00:00.49]       Stack Trace:
-[xUnit.net 00:00:00.50]         /home/runner/work/playground-csharp-xunit-github-action/playground-csharp-xunit-github-action/HelloUnitTestWorkFlow/Tests/UnitTestMathHelper.cs(19,0): at Tests.UnitTestMathHelper.TestSubtraction()
-[xUnit.net 00:00:00.50]   Finished:    Tests
+[xUnit.net 00:00:00.46]   Discovering: Tests
+[xUnit.net 00:00:00.53]   Discovered:  Tests
+[xUnit.net 00:00:00.53]   Starting:    Tests
+[xUnit.net 00:00:00.64]       Assert.Equal() Failure
+[xUnit.net 00:00:00.65]       Expected: 3
+[xUnit.net 00:00:00.65]       Actual:   70
+[xUnit.net 00:00:00.65]       Stack Trace:
+[xUnit.net 00:00:00.65]         /home/runner/work/playground-csharp-xunit-github-action/playground-csharp-xunit-github-action/HelloUnitTestWorkFlow/Tests/UnitTestMathHelper.cs(19,0): at Tests.UnitTestMathHelper.TestSubtraction()
+[xUnit.net 00:00:00.65]   Finished:    Tests
 </code></pre>
 </details>
 
@@ -94,7 +94,7 @@ Actual:   70</code></pre>
 <details>
 <summary>Error</summary>
 <pre><code>
-[xUnit.net 00:00:00.49]     Tests.UnitTestMathHelper.TestSubtraction [FAIL]
+[xUnit.net 00:00:00.64]     Tests.UnitTestMathHelper.TestSubtraction [FAIL]
 </code></pre>
 </details>
 
